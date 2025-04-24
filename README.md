@@ -2,4 +2,4 @@
 
 Screenshots
 
-![image](https://share.cleanshot.com/5pKYxw0Q)
+![image](https://share.cleanshot.com/w9tZDCTF)
