@@ -3,3 +3,9 @@
 Screenshots
 
 https://share.cleanshot.com/w9tZDCTF
+
+# Training RN Day 3
+
+Screenshots
+
+https://media.cleanshot.cloud/media/4691/h2uiv3fz5o8sIC4Jungv1G7fozMYgUjQqp9Ar88G.jpeg?Expires=1745864212&Signature=MWwDljk3KhUgqhuyZJKeWfWXPnyLkO-5kXdxofwzRsDlFDaHG5LzbXVw4uhIXaO9VVj1tYRPMHcdY-2XGswFzpw9fkHtlqK6za7-GX38NMbLOVGuAXwgWJocQwKgtZujR3l8w9NDpqTd~rYXYmVaXHR-sZNDFqfA~IaUbJUmrGxWNwhDkwuv-Okc3xryN1BvrLHDsZKZOJCfVgh4rkZM8WRUKP4cozVw6bo2jzfKmxQTzVT87LVWmYoR7RmU1xZa4xPUY5MYdgRt53j~wTn2XfNE6iDkqy--txDSt2szNS2mHaqLZhLmkvDHHc0XAs1UHCjndqaMTL3KjtodfVRz9Q__&Key-Pair-Id=K269JMAT9ZF4GZ
