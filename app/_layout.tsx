@@ -92,169 +92,190 @@ export default function RootLayout() {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.cardContainer}>
-        <View style={styles.card}>
-          <Image
-            style={styles.avatar}
-            source={{ uri: "https://picsum.photos/id/7/200" }}
-          />
-          <Text style={styles.fullName}>Dianna Leen</Text>
-          <Text style={styles.shortBio}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            ultricies dictum risus, a bibendum sem molestie non. Etiam porta
-            lectus quis suscipit cursus. Nulla quis ligula vel elit eleifend
-            mattis at id mauris. Integer euismod sapien erat, id congue felis
-            posuere ac. Proin in nibh ut quam maximus feugiat in ac lectus.
-            Quisque facilisis eleifend metus in accumsan. Aenean condimentum
-            ante enim, vitae malesuada elit volutpat vel.
-          </Text>
+    <ScrollView>
+      <View style={styles.container}>
+        <View style={styles.cardContainer}>
+          <View style={styles.card}>
+            <Image
+              style={styles.avatar}
+              source={{ uri: "https://picsum.photos/id/7/200" }}
+            />
+            <Text style={styles.fullName}>Dianna Leen</Text>
+            <Text style={styles.shortBio}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              ultricies dictum risus, a bibendum sem molestie non. Etiam porta
+              lectus quis suscipit cursus. Nulla quis ligula vel elit eleifend
+              mattis at id mauris. Integer euismod sapien erat, id congue felis
+              posuere ac. Proin in nibh ut quam maximus feugiat in ac lectus.
+              Quisque facilisis eleifend metus in accumsan. Aenean condimentum
+              ante enim, vitae malesuada elit volutpat vel.
+            </Text>
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                gap: 16,
+                width: "100%",
+              }}
+            >
+              <TouchableOpacity style={styles.buttonFollow}>
+                <Text
+                  style={{
+                    fontWeight: "bold",
+                    color: "inherit",
+                    textAlign: "center",
+                  }}
+                >
+                  Follow
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.buttonShare}>
+                <Text style={{ fontWeight: "bold", color: "inherit" }}>
+                  <ShareIcon width={16} height={16} />
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+        <View style={styles.content}>
           <View
             style={{
-              display: "flex",
-              flexDirection: "row",
-              gap: 16,
-              width: "100%",
+              width: 150,
+              backgroundColor: "#b33c34",
+              borderRadius: 8,
+              padding: 32,
             }}
           >
-            <TouchableOpacity style={styles.buttonFollow}>
-              <Text
-                style={{
-                  fontWeight: "bold",
-                  color: "inherit",
-                  textAlign: "center",
-                }}
-              >
-                Follow
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.buttonShare}>
-              <Text style={{ fontWeight: "bold", color: "inherit" }}>
-                <ShareIcon width={16} height={16} />
-              </Text>
-            </TouchableOpacity>
+            <Text
+              style={{
+                fontSize: 32,
+                color: "white",
+                textAlign: "center",
+              }}
+            >
+              10K
+            </Text>
+            <Text
+              style={{
+                fontSize: 16,
+                color: "#ffffff90",
+                textAlign: "center",
+              }}
+            >
+              Likes
+            </Text>
+
+            <View
+              style={{
+                borderWidth: 1,
+                borderColor: "#ffffff90",
+                marginVertical: 48,
+              }}
+            />
+
+            <Text
+              style={{
+                fontSize: 32,
+                color: "white",
+                textAlign: "center",
+              }}
+            >
+              641
+            </Text>
+
+            <Text
+              style={{
+                fontSize: 16,
+                color: "#ffffff90",
+                textAlign: "center",
+              }}
+            >
+              Following
+            </Text>
+
+            <View
+              style={{
+                borderWidth: 1,
+                borderColor: "#ffffff90",
+                marginVertical: 48,
+              }}
+            />
+
+            <Text
+              style={{
+                fontSize: 32,
+                color: "white",
+                textAlign: "center",
+              }}
+            >
+              2.1k
+            </Text>
+            <Text
+              style={{
+                fontSize: 16,
+                color: "#ffffff90",
+                textAlign: "center",
+              }}
+            >
+              Followers
+            </Text>
+          </View>
+
+          <View style={{ flex: 1 }}>
+            <Text
+              style={{
+                fontSize: 16,
+                color: "black",
+                fontWeight: "bold",
+                marginBottom: 16,
+              }}
+            >
+              Friends
+            </Text>
+
+            <View>
+              <FlatList
+                data={dataDummy}
+                horizontal
+                ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
+                style={styles.flatlist}
+                renderItem={({ item }) => (
+                  <Image
+                    style={styles.avatar}
+                    source={{ uri: item.avatarUrl }}
+                  />
+                )}
+              />
+            </View>
+
+            <Text
+              style={{
+                fontSize: 16,
+                color: "black",
+                fontWeight: "bold",
+                marginBottom: 16,
+              }}
+            >
+              Gallery
+            </Text>
+            <View>
+              <FlatList
+                data={dataDummy}
+                numColumns={2}
+                ItemSeparatorComponent={() => <View style={{ height: 20 }} />}
+                style={styles.flatlistGrid}
+                renderItem={({ item }) => (
+                  <Image
+                    style={styles.gridItem}
+                    source={{ uri: item.avatarUrl }}
+                  />
+                )}
+              />
+            </View>
           </View>
         </View>
       </View>
-      <View style={styles.content}>
-        <View
-          style={{
-            width: 150,
-            backgroundColor: "#b33c34",
-            borderRadius: 8,
-            padding: 32,
-          }}
-        >
-          <Text
-            style={{
-              fontSize: 32,
-              color: "white",
-              textAlign: "center",
-            }}
-          >
-            10K
-          </Text>
-          <Text
-            style={{
-              fontSize: 16,
-              color: "#ffffff90",
-              textAlign: "center",
-            }}
-          >
-            Likes
-          </Text>
-
-          <View
-            style={{
-              borderWidth: 1,
-              borderColor: "#ffffff90",
-              marginVertical: 48,
-            }}
-          />
-
-          <Text
-            style={{
-              fontSize: 32,
-              color: "white",
-              textAlign: "center",
-            }}
-          >
-            641
-          </Text>
-
-          <Text
-            style={{
-              fontSize: 16,
-              color: "#ffffff90",
-              textAlign: "center",
-            }}
-          >
-            Following
-          </Text>
-
-          <View
-            style={{
-              borderWidth: 1,
-              borderColor: "#ffffff90",
-              marginVertical: 48,
-            }}
-          />
-
-          <Text
-            style={{
-              fontSize: 32,
-              color: "white",
-              textAlign: "center",
-            }}
-          >
-            2.1k
-          </Text>
-          <Text
-            style={{
-              fontSize: 16,
-              color: "#ffffff90",
-              textAlign: "center",
-            }}
-          >
-            Followers
-          </Text>
-        </View>
-
-        <View style={{ flex: 1 }}>
-          <Text
-            style={{
-              fontSize: 16,
-              color: "black",
-              fontWeight: "bold",
-              marginBottom: 16,
-            }}
-          >
-            Friends
-          </Text>
-
-          <FlatList
-            data={dataDummy}
-            horizontal
-            ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
-            style={styles.flatlist}
-            renderItem={({ item }) => (
-              <Image style={styles.avatar} source={{ uri: item.avatarUrl }} />
-            )}
-          />
-
-          <Text
-            style={{
-              fontSize: 16,
-              color: "black",
-              fontWeight: "bold",
-              marginBottom: 16,
-            }}
-          >
-            Gallery
-          </Text>
-        </View>
-      </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -276,6 +297,9 @@ const styles = StyleSheet.create({
   },
   flatlist: {
     padding: 16,
+  },
+  flatlistGrid: {
+    height: 230,
   },
   cardContainer: { display: "flex", alignItems: "center" },
   card: {
@@ -333,5 +357,10 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 50,
     marginRight: 16,
+  },
+  gridItem: {
+    width: 100,
+    height: 100,
+    borderRadius: 24,
   },
 });
